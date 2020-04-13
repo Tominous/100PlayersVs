@@ -43,7 +43,7 @@ public class HundredVsCommand extends Command
     private void onHelp(CommandSender sender)
     {
         sender.sendMessage(CC.red + "/hv playedata reset");
-//        sender.sendMessage(CC.red + "/hv playedata set <Username> [Skill] [Value]");//I'm lazy
+        sender.sendMessage(CC.red + "/hv playedata set <Username> [Skill] [Value]");//I'm lazy
         sender.sendMessage(CC.red + "/hv playedata remove <Username>");
     }
 
