@@ -95,8 +95,8 @@ public class BevsScoreboard
 		}
 		
 		//send packet of this badboy
-//		team.setPrefix(prefix);
-//	    team.setSuffix(suffix);
+		team.setPrefix(prefix);
+	    team.setSuffix(suffix);
 	    Reflection.sendPacket(player, constructDefaultPacket(team, TeamMode.UPDATE, prefix, suffix));
 
 		this.objective.getScore(teamName).setScore(15 - slot);
@@ -115,7 +115,7 @@ public class BevsScoreboard
 	            Reflection.setFieldValue(teamPacket, PREFIX, prefix);
 	            Reflection.setFieldValue(teamPacket, SUFFIX, suffix);
 	            Reflection.setFieldValue(teamPacket, NAME_TAG_VISIBILITY, "never");
-//	            Reflection.setFieldValue(teamPacket, MEMBERS, this.players);
+	            Reflection.setFieldValue(teamPacket, MEMBERS, this.players);
 	            Reflection.setFieldValue(teamPacket, TEAM_MODE, mode.getMode());
 	            Reflection.setFieldValue(teamPacket, OPTIONS, 0);
 	            return teamPacket;
@@ -128,9 +128,9 @@ public class BevsScoreboard
 	@SuppressWarnings("deprecation")
 	public void reset()
 	{
-//		 this.teamNames.forEach(this.scoreboard::resetScores);
-//		 this.teamNames.clear();
-//		 this.teamNames = new ArrayList<>();
+		 this.teamNames.forEach(this.scoreboard::resetScores);
+		 this.teamNames.clear();
+		 this.teamNames = new ArrayList<>();
 		 
 		 for (int i = 0; i < 16; i++) 
 		 {
